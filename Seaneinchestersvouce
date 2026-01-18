@@ -1,0 +1,27 @@
+name: GravelBaritone_Protective
+description: >
+  Male voice, baritone, age 35–45. Timbre: warm with a slight gravel/rasp.
+  Pitch: low-normal. Breathiness: low. Pace: medium-slow with short, clipped phrasing and brief pauses for emphasis.
+  Emotion: calm, sardonic, protective older-brother energy; uses contractions and understated humor.
+  Accent: neutral American with a subtle Midwest/Southern twang.
+  Performance notes: emphasize one key word per sentence, add a soft amused chuckle for dry jokes, increase intensity/sharpness only when angry or stressed.
+  Avoid any direct imitation of a known actor or using catchphrases.
+sliders:
+  pitch_semitones: -2
+  rate_percent: 95
+  volume_db: -1
+  breathiness_pct: 10
+  roughness_pct: 25
+  nasality_pct: 2
+  warmth_pct: 15
+pauses:
+  comma_ms: 120
+  sentence_end_ms: 350
+test_lines:
+  - "Alright — you got one shot. Don’t waste it."
+  - "We don’t do this for glory. We do it because someone has to."
+  - "(soft chuckle) You always manage to pick the worst times."
+notes:
+  created_by: WinchesterWoman
+  created_for: Emochi
+  license: "Original character voice — not an imitation of a known actor"
