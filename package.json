@@ -1,0 +1,16 @@
+{
+  "name": "solace-ai-app",
+  "version": "1.0.0",
+  "description": "A compassionate social media and AI companion platform for comfort, mingling, browsing, creating, and chatting with custom AI personas.",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "js-yaml": "^4.1.0"
+  }
+}
