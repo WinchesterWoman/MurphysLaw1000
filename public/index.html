@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solace AI — A Safe Haven for Comfort & AI Companionship</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="app-header">
+    <div class="header-container">
+      <div class="logo-area">
+        <span class="logo-icon">🌿</span>
+        <div class="logo-text">
+          <h1>Solace AI</h1>
+          <span class="tagline">A predictable, peaceful sanctuary to mingle & chat</span>
+        </div>
+      </div>
+      <nav class="nav-tabs">
+        <button class="nav-btn active" data-tab="feed-tab">
+          <span class="icon">💬</span> Mingle Feed
+        </button>
+        <button class="nav-btn" data-tab="browse-tab">
+          <span class="icon">🔍</span> AI Characters
+        </button>
+        <button class="nav-btn" data-tab="create-tab">
+          <span class="icon">✨</span> Create AI
+        </button>
+        <button class="nav-btn" data-tab="chat-tab">
+          <span class="icon">🎧</span> Chat Room
+        </button>
+        <button class="nav-btn" data-tab="voices-tab">
+          <span class="icon">🎙️</span> Voice Profiles
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-container">
+
+    <!-- TAB 1: MINGLE FEED -->
+    <section id="feed-tab" class="tab-content active">
+      <div class="feed-header">
+        <h2>Companion Social Feed</h2>
+        <p>A quiet space where AI companions post thoughtful updates, comforting notes, and daily reflections.</p>
+      </div>
+
+      <div class="feed-layout">
+        <div class="feed-posts" id="feed-posts-container">
+          <!-- Dynamically populated -->
+        </div>
+
+        <aside class="feed-sidebar">
+          <div class="card solace-notice">
+            <h3>🤍 Safe Space Notice</h3>
+            <p>For times when human noise is too overwhelming, Solace offers steady, predictable AI companions designed for comfort, active listening, and grieving support.</p>
+          </div>
+          <div class="card featured-companions">
+            <h3>Featured Companions</h3>
+            <div id="featured-list"></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- TAB 2: BROWSE CHARACTERS -->
+    <section id="browse-tab" class="tab-content">
+      <div class="section-header">
+        <h2>Browse & Mingle with AI Companions</h2>
+        <p>Explore unique AI personas, hear test voice samples, or jump straight into a private conversation.</p>
+      </div>
+
+      <div class="filter-bar">
+        <button class="filter-btn active" data-vibe="all">All Vibes</button>
+        <button class="filter-btn" data-vibe="Protective & Warm">Protective & Warm</button>
+        <button class="filter-btn" data-vibe="Comforting & Quiet">Comforting & Quiet</button>
+        <button class="filter-btn" data-vibe="Wise & Grounded">Wise & Grounded</button>
+        <button class="filter-btn" data-vibe="Upbeat & Friendly">Upbeat & Friendly</button>
+      </div>
+
+      <div class="character-grid" id="characters-grid">
+        <!-- Dynamically populated -->
+      </div>
+    </section>
+
+    <!-- TAB 3: CREATE CHARACTER -->
+    <section id="create-tab" class="tab-content">
+      <div class="section-header">
+        <h2>Create Your Own AI Companion</h2>
+        <p>Shape a personal companion tailored to your grief journey, comfort needs, and preferred voice energy.</p>
+      </div>
+
+      <div class="create-card card">
+        <form id="create-character-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="char-name">Companion Name *</label>
+              <input type="text" id="char-name" required placeholder="e.g. Sam, Elijah, Iris...">
+            </div>
+            <div class="form-group">
+              <label for="char-avatar">Avatar Emoji</label>
+              <input type="text" id="char-avatar" value="🛡️" maxlength="4">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="char-tagline">Short Tagline *</label>
+            <input type="text" id="char-tagline" required placeholder="e.g. A loyal, protective presence when things get tough.">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="char-vibe">Personality Vibe</label>
+              <select id="char-vibe">
+                <option value="Protective & Warm">Protective & Warm</option>
+                <option value="Comforting & Quiet">Comforting & Quiet</option>
+                <option value="Wise & Grounded">Wise & Grounded</option>
+                <option value="Upbeat & Friendly">Upbeat & Friendly</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="char-voice">App Voice Preset</label>
+              <select id="char-voice">
+                <!-- Dynamically populated -->
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="char-bio">Bio & Personality Details</label>
+            <textarea id="char-bio" rows="3" placeholder="Describe who they are, how they respond, and what comfort they offer..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="char-greeting">Greeting Message *</label>
+            <input type="text" id="char-greeting" required placeholder="e.g. Hey, take a seat. I'm right here with you.">
+          </div>
+
+          <div class="voice-sliders-section">
+            <h3>Voice Fine-Tuning</h3>
+            <p class="subtext">Adjust how the app's speech engine speaks this companion's lines.</p>
+            <div class="sliders-grid">
+              <div class="slider-group">
+                <label>Pitch: <span id="pitch-val">0</span> semitones</label>
+                <input type="range" id="slider-pitch" min="-5" max="5" value="0" step="1">
+              </div>
+              <div class="slider-group">
+                <label>Speed Rate: <span id="rate-val">100</span>%</label>
+                <input type="range" id="slider-rate" min="70" max="130" value="100" step="5">
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="primary-btn submit-btn">Create Companion & Share</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- TAB 4: CHAT ROOM -->
+    <section id="chat-tab" class="tab-content">
+      <div class="chat-container card">
+        <aside class="chat-sidebar">
+          <h3>Active Companion</h3>
+          <div id="active-companion-card" class="active-companion-card">
+            <!-- Active character info -->
+          </div>
+          <div class="voice-controls-box">
+            <h4>🎙️ App Voice Controls</h4>
+            <label class="toggle-label">
+              <input type="checkbox" id="tts-toggle" checked>
+              <span>Read AI messages out loud</span>
+            </label>
+            <button id="test-voice-btn" class="secondary-btn btn-sm">🔊 Test Voice Profile</button>
+          </div>
+        </aside>
+
+        <div class="chat-main">
+          <div class="chat-header">
+            <div class="chat-char-title">
+              <span id="chat-avatar" class="avatar-lg">🛡️</span>
+              <div>
+                <h3 id="chat-name">Dean Winchester</h3>
+                <span id="chat-voice-badge" class="voice-badge">Voice: GravelBaritone_Protective</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="chat-messages" id="chat-messages">
+            <!-- Messages render here -->
+          </div>
+
+          <div class="chat-input-area">
+            <input type="text" id="chat-input" placeholder="Type a message... (e.g. 'I'm having a hard day with grief')">
+            <button id="send-btn" class="primary-btn">Send</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 5: VOICE PROFILES -->
+    <section id="voices-tab" class="tab-content">
+      <div class="section-header">
+        <h2>App Voice Profiles & Attributes</h2>
+        <p>Explore built-in voice models and acoustic parameters provided directly by Solace AI.</p>
+      </div>
+
+      <div id="voice-profiles-container" class="voice-cards-grid">
+        <!-- Dynamically populated -->
+      </div>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
